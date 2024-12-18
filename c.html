@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="c.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Contact Me</h1>
+    <p>Feel free to reach out to me. I'll get back to you as soon as possible!</p>
+
+    <form class="contact-form" id="contactForm">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name">
+
+      <label for="contact">Your Contact Number:</label>
+      <input type="tel" id="contact" name="contact" placeholder="Enter your contact number">
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email">
+
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Enter your message"></textarea>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+
+    <p id="successMessage" style="display:none; color: green;">Your message has been sent successfully!</p>
+  </div>
+
+  <script>
+   
+    const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+
+   
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); 
+
+      
+      const name = document.getElementById('name').value;
+      const contact = document.getElementById('contact').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      
+      if (name === '' || contact === '' || email === '' || message === '') {
+        alert('Please fill in all fields!');
+        return;
+      }
+
+      
+      const phoneRegex = /^[0-9]{10}$/;
+      if (!phoneRegex.test(contact)) {
+        alert('Please enter a valid 10-digit phone number!');
+        return;
+      }
+
+  
+      const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address!');
+        return;
+      }
+
+      
+      console.log('Form submitted with data: ', { name, contact, email, message });
+
+    
+      successMessage.style.display = 'block';
+      form.reset(); 
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Outfit', sans-serif;
+    background: linear-gradient(135deg, #fce6e4, #f5f7fc);
+    color: #333;
+  }
+  
+  .contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 2rem;
+  }
+  
+  .contact-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    width: 100%;
+  }
+  
+  .contact-left-title h2 {
+    font-weight: 600;
+    color: #ff6699;
+    font-size: 2.5rem;
+  }
+  
+  .contact-left-title hr {
+    border: none;
+    width: 100px;
+    height: 5px;
+    background: #ff6699;
+    margin: 10px 0;
+    border-radius: 10px;
+  }
+  
+  .contact-inputs,
+  textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .contact-inputs:focus,
+  textarea:focus {
+    border-color: #ff6699;
+  }
+  
+  textarea {
+    resize: none;
+    height: 150px;
+  }
+  
+  .contact-inputs::placeholder,
+  textarea::placeholder {
+    color: #aaa;
+  }
+  
+  /* Submit Button */
+  .contact-left button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    color: white;
+    background: linear-gradient(135deg, #ff6699, #ff9966);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contact-left button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(255, 102, 153, 0.3);
+  }
+  
+  .contact-left button img {
+    height: 15px;
+  }
+  
+ 
+  .contact-right img {
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .contact-right {
+      display: none;
+    }
+  
+    .contact-left {
+      max-width: 100%;
+    }
+  }
+  

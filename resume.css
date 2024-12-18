@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap');
+
+.first{
+
+  font-family: "Doto", sans-serif;
+  font-optical-sizing: auto;
+  
+   
+}
+ 
+
+.second{
+    font-size: 300%;
+    font-family: sans-serif;
+
+}
+
+.table1{
+    border-spacing: 10px; 
+}
+
+
+header{
+    text-align: center;
+    padding: 40px;
+    margin: 40px;
+    color: #00246B;
+   background-color: #CADCFC;
+}
+
+.s1{text-align: center;
+    padding: 40px;
+    margin: 40px;
+    color: #00246B;
+   background-color: #CADCFC;
+}
+
+.id1{
+    font-size: 200%;
+    text-align: center;
+}
+
+li{
+    display: inline;
+    padding: 80px;
+    text-align: center;
+    color: black;
+}
+
+li:hover{
+    color: black;
+    cursor: pointer;
+}
+
